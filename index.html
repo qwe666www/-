@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>极简时钟</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <header class="toolbar" aria-label="clock controls">
+      <label>
+        时区：
+        <select id="timezone"></select>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="is24h" checked />
+        24小时制
+      </label>
+      <button id="themeBtn" aria-pressed="false">切换主题</button>
+    </header>
+
+    <section class="clocks">
+      <!-- 模拟钟表 -->
+      <div class="analog" aria-label="analog clock" role="img">
+        <div class="dial">
+          <div class="hand hour" id="handHour"></div>
+          <div class="hand minute" id="handMinute"></div>
+          <div class="hand second" id="handSecond" aria-hidden="true"></div>
+          <!-- 刻度 -->
+          <div class="ticks" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- 数字时钟 -->
+      <div class="digital" aria-live="polite" aria-atomic="true">
+        <div class="time" id="digitalTime">--:--:--</div>
+        <div class="date" id="digitalDate">-- -- --</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Made with focus ⏱️</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
