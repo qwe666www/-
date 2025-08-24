@@ -9,7 +9,7 @@
   --shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-/* 深色模式（跟随系统） */
+/* 蓝色模式（跟随系统） */
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0b0e13;
@@ -184,3 +184,4 @@ button{
 }
 
 /* 通过 JS 生成多重阴影，见 main.js */
+
